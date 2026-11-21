@@ -1,0 +1,31 @@
+class Patient:
+    def __init__(self, name, id):
+        self.name = name
+        self.id = id
+
+class Doctor:
+    def __init__(self, name, specialty):
+        self.name = name
+        self.specialty = specialty
+
+class Hospital:
+    def __init__(self, name):
+        self.name = name
+        self.patients = []
+        self.doctors = []
+
+    def add_patient(self, patient):
+        self.patients.append(patient)
+        print(f"تم تسجيل المريض: {patient.name}")
+
+    def add_doctor(self, doctor):
+        self.doctors.append(doctor)
+        print(f"تم تسجيل الطبيب: {doctor.name}")
+
+# تجربة النظام
+hospital = Hospital("المركز الطبي")
+p1 = Patient("أحمد علي", "P101")
+d1 = Doctor("د. سارة", "باطنة")
+
+hospital.add_patient(p1)
+hospital.add_doctor(d1)
